@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddIcon from '@mui/icons-material/Add';
 
 function CreateNote(props) {
   // State for title and content
@@ -47,7 +48,7 @@ function CreateNote(props) {
           value={note.content}
           onChange={handleChange}
         />
-        <button type="submit">Add</button>
+        <button type="submit"><AddIcon/></button>
       </form>
     </div>
   );
