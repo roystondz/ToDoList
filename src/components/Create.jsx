@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CreateNote() {
+function CreateNote(props) {
   // State for title and content
   const [note, setNote] = useState({
     title: "",
@@ -18,14 +18,16 @@ function CreateNote() {
 
   // Handle form submission
   function submitNote(event) {
+    props.onAdd(note);
     event.preventDefault();
+    
     console.log("Note Submitted:", note);
-    // You can add further processing here, e.g., saving the note
-    // Clear the form fields after submission
+    
     setNote({
       title: "",
       content: ""
     });
+    
   }
 
   return (
