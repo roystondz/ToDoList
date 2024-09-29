@@ -1,4 +1,4 @@
-# create a basic todolist
+# Create a basic todolist
 ---
 
 ### ToDoList App
